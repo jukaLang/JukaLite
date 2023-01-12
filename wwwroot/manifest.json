@@ -1,0 +1,10 @@
+{
+  "name": "Juka IDE (Lite)",
+  "short_name": "Juka IDE (Lite)",
+  "theme_color": "rgb(51, 52, 71)",
+  "background_color": "#FFF",
+  "display": "standalone",
+  "prefer_related_applications": false,
+  "start_url": "./",
+  "icons": []
+}

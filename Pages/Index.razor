@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<h1>Juka IDE (Lite) [faster and simpler IDE]</h1>
+
+<textarea @bind="@_jukaCode" rows="20" cols="150" spellcheck="false" style="width: 100%; height: auto;"></textarea>
+<br />
+<button @onclick="RunJuka">Run Juka</button><br/>
+<h2>Output:</h2>
+<pre>@(_output)</pre>
+
+@code {
+    string _jukaCode = @"func main() = {
+    // outputs 'Hello World'
+    var x = ""Hello World"";
+    printLine(x);
+}";
+    string _output = " ";
+
+    void RunJuka()
+    {
+        _output = new Compiler().Go(_jukaCode,false);
+    }
+}
