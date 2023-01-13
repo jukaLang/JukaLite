@@ -1,12 +1,13 @@
 ﻿<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
-        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        <FocusOnNavigate RouteData="@routeData" Selector="textarea" />
     </Found>
     <NotFound>
         <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <p role="alert">Something went wrong, please report it as a "bug" in the issues tab at 
+                <a href="https://github.com/jukaLang/JukaLite" target="_blank">https://github.com/jukaLang/JukaLite</a></p>
         </LayoutView>
     </NotFound>
 </Router>
